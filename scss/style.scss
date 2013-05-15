@@ -1,0 +1,134 @@
+/*!
+Theme Name: Hype Advertising
+Theme URI: http://hypeadvertising.com/
+Author: CT Web Design Team
+Author URI: http://ctwebdesignshop.com/
+Description: Starter child theme for the required+ Foundation parent theme.
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0.1
+Template: required-foundation
+Text Domain: requiredstarter
+*/
+
+/*
+	This is the start of the css!
+*/
+@import url(../HypeAdvertising/app.css);
+
+@import url(../required-foundation/style.css);
+
+@import "zurb/shared";
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Arial Black",Gadget,sans-serif;
+  font-weight: 300; }
+
+#site-title {
+  font-weight: 600; }
+
+.required-header .inline-list {
+  margin-top: 14px; }
+
+//Custom Code
+//------------------------------------------
+
+#supplementary {
+    padding-top: 0px;
+}
+
+#footer {
+	padding-top: 20px;
+}
+footer > div.row:last-child {
+	margin-top: 10px;
+	border-top: solid 0px #E6E6E6;
+	padding-top: 10px;
+}
+footer > div.row:first-child {
+	margin-bottom: -50px;
+	padding-top: 10px;
+}
+
+.entry-content ul, aside ul {
+  margin-left:-12spx;
+  margin-bottom: 0px;
+}
+
+
+
+//Nivo Slider Code
+//------------------------------------------
+
+.slider-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+.clear {
+	clear:both;
+}
+
+
+/*=====================*/
+/*=== Custom Styles ===*/
+/*=====================*/
+
+.picNav {
+    position: absolute;
+    background: none repeat scroll 0 0 #000000;
+    bottom: 0;
+    color: #FFFFFF;
+    height: 65px;
+    left: 0;
+    opacity: 0.8;
+    padding: 5px 15px;
+    width: 100%;
+    z-index: 8;
+    & a {
+      color: $white;
+      opacity: 1;
+      &:hover {
+      color: darken($orange, 20%);
+      }
+      &:focus {
+        color: $orange;
+        outline: none;
+      }
+    }
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  /* Small Device Styles here */
+
+  .picNav {
+    position: absolute;
+    background: none repeat scroll 0 0 #000000;
+    bottom: 0;
+    color: #FFFFFF;
+    height: 55px;
+    left: 0;
+    opacity: 0.8;
+    padding: 13px 20px;
+    width: 100%;
+    z-index: 8;
+    & a {
+      color: $white;
+      opacity: 1;
+      &:hover {
+      color: darken($orange, 20%);
+      }
+      &:focus {
+        color: $orange;
+        outline: none;
+      }
+    }
+}
+}
+

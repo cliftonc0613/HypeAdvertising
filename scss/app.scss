@@ -1,0 +1,741 @@
+/**!
+ * This app.css is all yours, if you wish to have it ready with your application put it in here!
+ */
+
+ /*! -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Homepage
+:: Porfolio
+:: Page
+
+ */
+
+/*! -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+// Shared
+@import "zurb/shared";
+
+body { background: $body-background; font-family: "Arial",Gadget,sans-serif; font-weight: normal; font-style: normal; font-size: 14px; line-height: 1; color: #eeeeee; position: relative; -webkit-font-smoothing: antialiased; }
+
+// Headers
+// ----------------------------------------
+
+#{headings(all)} {
+  color: $orange;
+  font-weight: bold;
+  line-height: 1.25;
+  a {
+    font-weight: inherit;
+  }
+}
+
+
+// Links
+//-----------------------------------------
+
+a { 
+  color: $default-color;
+  -web-transition: color .75 ease;  
+  -moz-transition: color .75 ease;
+  -o-transition: color .75 ease;
+  transition: color .75 ease;
+  text-decoration: none;
+  line-height: inherit;
+  &:hover {
+    color: darken($green, 20%);
+  }
+  &:focus {
+    color: $default-color;
+    outline: none;
+  }
+}
+
+p {
+  a, a:visited {
+    line-height: inherit;
+  }
+}
+
+ul {
+  &.inline-list-ctr, &.link-list-ctr {
+    margin: 0 0 12px 12px;
+    padding: 0;
+    list-style: none;
+    overflow: hidden; }
+  &.inline-list-ctr > li, &.link-list-ctr > li {
+    list-style: none;
+    float: left;
+    margin-left: 22px;
+    display: block; }
+  &.inline-list-ctr > li > *, &.link-list-ctr > li > * {
+    display: block;font-size: 15px; } }
+
+ul.inline-list > li, ul.link-list > li {
+  display: block;
+  float: left;
+  list-style: none outside none;
+  margin-left: 22px;
+  text-align: center;
+}
+
+// Panels
+//---------------------------------------------------
+
+div.panel {  
+  border: solid 1px darken($green, 30%); 
+  padding: 20px 20px 10px 20px;
+  background-color: $green;
+  @include background-image(linear-gradient($green 0%, darken($green, 10%) 100%));
+  @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.15));
+  margin: 0 0 20px 0;
+}
+
+// buttons
+//-----------------------------------------
+@import "zurb/buttons";
+
+// footer
+//-----------------------------------------
+
+footer {
+    background-color: #333333;
+    background-image: url('../images/welcome_panel.jpg');
+    margin-top: 25px;
+    border-top: 2px solid $black;
+}
+
+.nav-bar { 
+  height: 40px; 
+  background: $five;
+  border: 0px dashed white;
+  border-radius: 0px;
+  margin-left: 0; 
+  margin-top: 35px; 
+  padding: 0; 
+  color: $default-color;
+
+  &> li { 
+    float: left; 
+    display: block; 
+    position: relative; 
+    padding: 0; 
+    margin: 0; 
+    border: 0px; 
+    border-right: 0px solid $five; 
+    line-height: 38px; 
+    -webkit-box-shadow: 0px 0 0 rgba(255, 255, 255, 0.2) inset; 
+    -moz-box-shadow: 0px 0 0 rgba(255, 255, 255, 0.2) inset; 
+    box-shadow: 0px 0 0 rgba(255, 255, 255, 0.2) inset; 
+    &:first-child {
+      border-radius: 00px ;
+      border: 0px dashed $five; 
+      -webkit-box-shadow: 0 0 0; 
+      -moz-box-shadow: 0 0 0; 
+      box-shadow: 0 0 0; }
+    &:last-child { 
+      border-right: 0px solid $five;
+      
+      -webkit-box-shadow: 0px 0 0 rgba(255, 255, 255, 0.2) inset, 0px 0 0 rgba(255, 255, 255, 0.2);
+       -moz-box-shadow: 0px 0 0 rgba(255, 255, 255, 0.2) inset, 0px 0 0 rgba(255, 255, 255, 0.2); 
+       box-shadow: 0px 0 0 rgba(255, 255, 255, 0.2) inset, 0px 0 0 rgba(255, 255, 255, 0.2);}
+    &.active { 
+      background: $five;
+      color: $default-color; 
+      border-color: #ccc;
+      & a { 
+        color: $default-color; 
+        cursor: default; }
+      &:hover { 
+        background: $five; 
+        color: darken($default-color, 20%);
+        cursor: default;
+        border-radius: 00px; }
+    }
+     &:hover { background: $five; color: darken($default-color, 20%);}
+     &> a { color: $default-color;}
+     & ul { margin-bottom: 0; }
+     &.flyout { display: none; }
+     &.has-flyout {
+       &> a:first-child { 
+        padding-right: 40px; 
+        position: relative; 
+        &:after { 
+          content: ""; 
+          display: block; 
+          width: 0; 
+          height: 0; 
+          border: solid 4px; 
+          border-color: #e6e6e6 transparent transparent transparent; 
+          position: absolute; 
+          right: 20px; 
+          top: 17px; }
+      }
+       &.a.flyout-toggle { 
+        border-left: 0 !important; 
+        position: absolute; 
+        right: 0; 
+        top: 0; 
+        padding: 20px;
+         z-index: 2; 
+         display: block; }
+       &.is-touch {
+        &> a:first-child { padding-right: 55px; }
+        &> a.flyout-toggle { border-left: 1px dashed $default-color; }
+     }
+    }
+     &> a:first-child { 
+      position: relative; 
+      padding: 0 10px; 
+      display: block; 
+      text-decoration: none; 
+      font-size: 16px; 
+    } 
+     &> input { margin: 0 10px; }
+  }
+  &.vertical { height: auto; margin-top: 0; 
+    &> li { 
+      float: none; 
+      border-bottom: none; 
+      border-right: solid 1px #333333; 
+      -webkit-box-shadow: none; 
+      -moz-box-shadow: none; 
+      box-shadow: none; 
+      &.has-flyout > a:first-child:after { 
+        content: ""; 
+        display: block; 
+        width: 0; 
+        height: 0; 
+        border: solid 4px; 
+        border-color: transparent transparent transparent #e6e6e6;
+      }
+      &.flyout { left: 100%; top: -1px; 
+        &.right { left: auto; right: 100%; }
+      }
+      &.active { border-right: solid 1px #2284a1; }
+      &:last-child { border-bottom: solid 1px #333333; }
+    }
+  }
+}
+
+.flyout { 
+  background: $charcoal;
+  border-radius: 0px;
+  margin-top: -10px; 
+  padding: 20px; 
+  border: 0px dashed $default-color; 
+  position: absolute; 
+  top: 39px; 
+  left: -1px; 
+  width: 150px; 
+  z-index: 40; 
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); 
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* remove margin on any first-child element */ /* remove margin on last element */
+  &> li { 
+    float: left; 
+    display: block; 
+    position: relative; 
+    padding: 0; 
+    margin: 0; 
+    border: 0px solid #333333; 
+    border-right: none; 
+    line-height: 38px; 
+    -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; 
+    -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; 
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; 
+    & p { line-height: 1.2; font-size: 13px; }
+    &*:first-child { margin-top: 0; }
+    &*:last-child { margin-bottom: 0; }
+    &.small { width: 166.66667px; }
+    &.flyout.large { width: 437.5px; }
+    &.up { top: auto; bottom: 39px; }
+  } 
+}
+/*
+ul.flyout, .nav-bar li ul { padding: 0; list-style: none; }
+ul.flyout li, .nav-bar li ul li { border-left: 0px solid #CCC; }
+ul.flyout li a, .nav-bar li ul li a { background: $light_grey;  color: $default-color; border-radius: 00px; border: 0px dashed $default-color; border-width: 0px; display: block; font-size: 14px; height: auto; line-height: 1; padding: 15px 20px; width:150px; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
+ul.flyout li a:hover, ul.flyout li a:focus, .nav-bar li ul li a:hover, .nav-bar li ul li a:focus { background: $dark_grey;  color: darken($default-color, 90%); width:150px;  }
+ul.flyout li.active, .nav-bar li ul li.active { margin-top: 0; border-top: 0px solid #4d4d4d; border-left: 0px solid #1a1a1a; width:150px; }
+ul.flyout li.active a, .nav-bar li ul li.active a { background: $five;  color: lighten($default-color, 40%); width:150px;  border: none; height: auto; margin: 0; position: static; top: 0; -webkit-box-shadow: 0 0 0; -moz-box-shadow: 0 0 0; box-shadow: 0 0 0; }
+*/
+ul.flyout, .nav-bar li ul { padding: 0; list-style: none; }
+ul.flyout li, .nav-bar li ul li { border-left: 0px solid #CCC; }
+ul.flyout li a, .nav-bar li ul li a {  background: $five; color: $default-color; border-radius: 00px; border: 0px dashed $default-color; border-width: 0px; display: block; font-size: 14px; height: auto; line-height: 1; padding: 15px 20px; width:150px; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
+ul.flyout li a:hover, ul.flyout li a:focus, .nav-bar li ul li a:hover, .nav-bar li ul li a:focus { background: $five;  color: $white; width:150px;  }
+ul.flyout li.active, .nav-bar li ul li.active { margin-top: 0; border-top: 0px solid #4d4d4d; border-left: 0px solid #1a1a1a; width:150px; }
+ul.flyout li.active a, .nav-bar li ul li.active a {   color: lighten($default-color, 40%); width:150px;  border: none; height: auto; margin: 0; position: static; top: 0; -webkit-box-shadow: 0 0 0; -moz-box-shadow: 0 0 0; box-shadow: 0 0 0; }
+
+
+
+
+
+/*! -----------------------------------------
+   HomePage
+----------------------------------------- */
+
+.welcome {
+    position: relative;
+    background: none repeat scroll 0 0 $dark_grey;
+    background-image: url('../images/welcome_panel.jpg');
+    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 0px 0 0px;
+    text-align:left;
+}
+
+
+
+.home-slider {
+  //position: absolute;
+  //border: 5px solid $orange;
+  padding: 0px 0 60px;
+  top:50px;
+
+}
+
+.phone { font-size:18px;}
+.phone1 { margin-top:42px; font-size:18px;}
+
+
+
+// Orbit Slider
+//---------------------------------------
+
+
+// Bulle Nav
+//--------------------------------------------------
+
+
+
+/*! -----------------------------------------
+   Misc.
+----------------------------------------- */
+/*! How to use: <hr class="carved" /> */
+hr.carved {
+  clear: both; 
+  float: none; 
+  width: 100%; 
+  height: 2px;
+  margin: 1.4em 0;
+  border: none; 
+  background: #ddd;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0.5, rgb(221,221,221)),
+      color-stop(0.5, rgb(255,255,255))
+  );
+  background-image: -moz-linear-gradient(
+      center top,
+      rgb(221,221,221) 50%,
+      rgb(255,255,255) 50%
+  );
+}
+
+/*! -----------------------------------------
+   Porfolio
+----------------------------------------- */
+.view {
+    width: 280px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    border: 10px solid darken($default-color, 10%);;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px $dark_grey;
+    cursor: default;
+    background: #fff url(../images/bgimg.jpg) no-repeat center center
+}
+.view .mask, .view .content {
+    width: 280px;
+    height: 185px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.view img {
+    display: block;
+    position: relative
+}
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0;
+    width: 280px;
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center;
+    margin-bottom: -5px;
+    width: 280px;
+}
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+.view a.info:hover {
+    box-shadow: 0 0 5px #000
+}
+
+.view-first img {
+   -webkit-transition: all 0.2s linear;
+   -moz-transition: all 0.2s linear;
+   -o-transition: all 0.2s linear;
+   -ms-transition: all 0.2s linear;
+   transition: all 0.2s linear;
+}
+.view-first .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   background-color: rgba(140,198,63, 0.7);
+   -webkit-transition: all 0.4s ease-in-out;
+   -moz-transition: all 0.4s ease-in-out;
+   -o-transition: all 0.4s ease-in-out;
+   -ms-transition: all 0.4s ease-in-out;
+   transition: all 0.4s ease-in-out;
+}
+.view-first h2 {
+   -webkit-transform: translateY(-100px);
+   -moz-transform: translateY(-100px);
+   -o-transform: translateY(-100px);
+   -ms-transform: translateY(-100px);
+   transform: translateY(-100px);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+.view-first p {
+   -webkit-transform: translateY(100px);
+   -moz-transform: translateY(100px);
+   -o-transform: translateY(100px);
+   -ms-transform: translateY(100px);
+   transform: translateY(100px);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transition: all 0.2s linear;
+   -moz-transition: all 0.2s linear;
+   -o-transition: all 0.2s linear;
+   -ms-transition: all 0.2s linear;
+   transition: all 0.2s linear;
+}
+.view-first:hover img {
+   -webkit-transform: scale(1.1,1.1);
+   -moz-transform: scale(1.1,1.1);
+   -o-transform: scale(1.1,1.1);
+   -ms-transform: scale(1.1,1.1);
+   transform: scale(1.1,1.1);
+}
+.view-first a.info {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+.view-first:hover .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+   -webkit-transform: translateY(0px);
+   -moz-transform: translateY(0px);
+   -o-transform: translateY(0px);
+   -ms-transform: translateY(0px);
+   transform: translateY(0px);
+}
+.view-first:hover p {
+   -webkit-transition-delay: 0.1s;
+   -moz-transition-delay: 0.1s;
+   -o-transition-delay: 0.1s;
+   -ms-transition-delay: 0.1s;
+   transition-delay: 0.1s;
+}
+.view-first:hover a.info {
+   -webkit-transition-delay: 0.2s;
+   -moz-transition-delay: 0.2s;
+   -o-transition-delay: 0.2s;
+   -ms-transition-delay: 0.2s;
+   transition-delay: 0.2s;
+}
+
+/*! -----------------------------------------
+   Page
+----------------------------------------- */
+.page-header {
+    background: none repeat scroll 0 0 $dark_grey;
+    background-image: url('../images/welcome_panel.jpg');
+    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 20px 0 20px;
+    text-align:left;
+    h4 {
+        color: #89C348;
+        //font-size: 60px;
+        font-weight: bold;
+        line-height: 1.25;
+        //text-align: center;
+        //text-shadow: 5px 4px 3px #777777;
+        a {
+          font-weight: inherit;
+        }
+    }
+}
+
+.shadow {
+  -moz-box-shadow: 3px 3px 4px $orange;
+  -webkit-box-shadow: 3px 3px 4px $orange;
+  box-shadow: 3px 3px 4px $orange;
+}
+
+
+/*! -----------------------------------------
+   Landing Page
+----------------------------------------- */
+
+.LPcontainer {
+    margin: 75px auto;
+    background: $white;
+    padding: 20px;
+    opacity:0.90;
+    color: $black;
+}
+
+.LPbody { background: url('../images/LandingBG.png'); }
+
+
+
+
+@media only screen and (max-width: 767px) { 
+
+/*! -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+// Navigation links
+//---------------------------------------
+.nav-bar { 
+  height: 40px; 
+  background: $charcoal; 
+  margin-left: 0; 
+  margin-top: 20px; 
+  padding: 0; 
+  &> li { 
+    float: left; 
+    display: block; 
+    position: relative; 
+    padding: 0; 
+    margin: 0; 
+    border: 1px solid #333333; 
+    border-right: none; 
+    line-height: 38px; 
+    -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; 
+    -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; 
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; 
+    &:first-child { 
+      -webkit-box-shadow: 0 0 0; 
+      -moz-box-shadow: 0 0 0; 
+      box-shadow: 0 0 0; }
+    &:last-child { 
+      border-right: solid 1px #333333; 
+      -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2);
+       -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2); 
+       box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2);}
+    &.active { 
+      background: $default-color; 
+      border-color: #2284a1;
+      & a { 
+        color: white; 
+        cursor: default; }
+      &:hover { 
+        background: $default-color; 
+        cursor: default; }
+    }
+     &:hover { background: $dark_grey; }
+     &> a { color: $white; }
+     & ul { margin-bottom: 0; }
+     &.flyout { display: none; }
+     &.has-flyout {
+       &> a:first-child { 
+        padding-right: 40px; 
+        position: relative; 
+        &:after { 
+          content: ""; 
+          display: block; 
+          width: 0; 
+          height: 0; 
+          border: solid 4px; 
+          border-color: #e6e6e6 transparent transparent transparent; 
+          position: absolute; 
+          right: 20px; 
+          top: 17px; }
+      }
+       &.a.flyout-toggle { 
+        border-left: 0 !important; 
+        position: absolute; 
+        right: 0; 
+        top: 0; 
+        padding: 20px;
+         z-index: 2; 
+         display: block; }
+       &.is-touch {
+        &> a:first-child { padding-right: 55px; }
+        &> a.flyout-toggle { border-left: 1px dashed #666; }
+     }
+    }
+     &> a:first-child { 
+      position: relative; 
+      padding: 0 20px; 
+      display: block; 
+      text-decoration: none; 
+      font-size: 14px; 
+    } 
+     &> input { margin: 0 10px; }
+  }
+  &.vertical { height: auto; margin-top: 0; 
+    &> li { 
+      float: none; 
+      border-bottom: none; 
+      border-right: solid 1px #333333; 
+      -webkit-box-shadow: none; 
+      -moz-box-shadow: none; 
+      box-shadow: none; 
+      &.has-flyout > a:first-child:after { 
+        content: ""; 
+        display: block; 
+        width: 0; 
+        height: 0; 
+        border: solid 4px; 
+        border-color: transparent transparent transparent #e6e6e6;
+      }
+      &.flyout { left: 100%; top: -1px; 
+        &.right { left: auto; right: 100%; }
+      }
+      &.active { border-right: solid 1px #2284a1; }
+      &:last-child { border-bottom: solid 1px #333333; }
+    }
+  }
+}
+
+.flyout { 
+  background: #f2f2f2; 
+  padding: 20px; 
+  margin: 0; 
+  border: 1px solid #d9d9d9; 
+  position: absolute; 
+  top: 39px; 
+  left: -1px; 
+  width: 150px; 
+  z-index: 40; 
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); 
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* remove margin on any first-child element */ /* remove margin on last element */ 
+  &> li { 
+    float: left; 
+    display: block; 
+    position: relative; 
+    padding: 0; 
+    margin: 0; 
+    border: 1px solid #333333; 
+    border-right: none; 
+    line-height: 38px; 
+    -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; 
+    -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; 
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset; 
+    & p { line-height: 1.2; font-size: 13px; }
+    &*:first-child { margin-top: 0; }
+    &*:last-child { margin-bottom: 0; }
+    &.small { width: 166.66667px; }
+    &.flyout.large { width: 437.5px; }
+    &.up { top: auto; bottom: 39px; }
+  } 
+}
+
+ul.flyout, .nav-bar li ul { padding: 0; list-style: none; }
+ul.flyout li, .nav-bar li ul li { border-left: solid 3px #CCC; }
+ul.flyout li a, .nav-bar li ul li a { background: #f2f2f2; border: 1px solid #e6e6e6; border-width: 1px 1px 0 0; color: #555; display: block; font-size: 14px; height: auto; line-height: 1; padding: 15px 20px; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
+ul.flyout li a:hover, ul.flyout li a:focus, .nav-bar li ul li a:hover, .nav-bar li ul li a:focus { background: #ebebeb; color: #333; }
+ul.flyout li.active, .nav-bar li ul li.active { margin-top: 0; border-top: 1px solid #4d4d4d; border-left: 4px solid #1a1a1a; }
+ul.flyout li.active a, .nav-bar li ul li.active a { background: #4d4d4d; border: none; color: #fff; height: auto; margin: 0; position: static; top: 0; -webkit-box-shadow: 0 0 0; -moz-box-shadow: 0 0 0; box-shadow: 0 0 0; }
+
+
+
+
+
+  /*! -----------------------------------------
+   HomePage
+----------------------------------------- */
+
+
+
+  /*! -----------------------------------------
+   Page
+----------------------------------------- */
+.page-header {
+  background: none repeat scroll 0 0 $dark_grey;
+    background-image: url('../images/welcome_panel.jpg');
+    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 20px 0 20px;
+    text-align:left;
+  h4 {
+    color: $green;
+  font-weight: bold;
+  line-height: 1.25;
+    a {
+      font-weight: inherit;
+    }
+  }
+}
+
+/*! -----------------------------------------
+   Landing Page
+----------------------------------------- */
+
+.LPcontainer {
+    margin: 10px auto;
+    background: $white;
+    padding: 10px;
+    opacity:0.90;
+    color: $black;
+}
+
+}

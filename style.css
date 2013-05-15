@@ -1,0 +1,137 @@
+@import url(../HypeAdvertising/app.css);
+@import url(../required-foundation/style.css);
+/*
+Theme Name: Hype Advertising
+Theme URI: http://hypeadvertising.com/
+Author: CT Web Design Team
+Author URI: http://ctwebdesignshop.com/
+Description: Starter child theme for the required+ Foundation parent theme.
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0.1
+Template: required-foundation
+Text Domain: requiredstarter
+*/
+/*
+	This is the start of the css!
+*/
+/* line 23, ../scss/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Arial Black",Gadget,sans-serif;
+  font-weight: 300;
+}
+
+/* line 27, ../scss/style.scss */
+#site-title {
+  font-weight: 600;
+}
+
+/* line 30, ../scss/style.scss */
+.required-header .inline-list {
+  margin-top: 14px;
+}
+
+/* line 36, ../scss/style.scss */
+#supplementary {
+  padding-top: 0px;
+}
+
+/* line 40, ../scss/style.scss */
+#footer {
+  padding-top: 20px;
+}
+
+/* line 43, ../scss/style.scss */
+footer > div.row:last-child {
+  margin-top: 10px;
+  border-top: solid 0px #E6E6E6;
+  padding-top: 10px;
+}
+
+/* line 48, ../scss/style.scss */
+footer > div.row:first-child {
+  margin-bottom: -50px;
+  padding-top: 10px;
+}
+
+/* line 53, ../scss/style.scss */
+.entry-content ul, aside ul {
+  margin-left: -12spx;
+  margin-bottom: 0px;
+}
+
+/* line 63, ../scss/style.scss */
+.slider-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+/* line 72, ../scss/style.scss */
+.clear {
+  clear: both;
+}
+
+/*=====================*/
+/*=== Custom Styles ===*/
+/*=====================*/
+/* line 81, ../scss/style.scss */
+.picNav {
+  position: absolute;
+  background: none repeat scroll 0 0 #000000;
+  bottom: 0;
+  color: #FFFFFF;
+  height: 65px;
+  left: 0;
+  opacity: 0.8;
+  padding: 5px 15px;
+  width: 100%;
+  z-index: 8;
+}
+/* line 92, ../scss/style.scss */
+.picNav a {
+  color: white;
+  opacity: 1;
+}
+/* line 95, ../scss/style.scss */
+.picNav a:hover {
+  color: #be6506;
+}
+/* line 98, ../scss/style.scss */
+.picNav a:focus {
+  color: #f89832;
+  outline: none;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Small Device Styles here */
+  /* line 110, ../scss/style.scss */
+  .picNav {
+    position: absolute;
+    background: none repeat scroll 0 0 #000000;
+    bottom: 0;
+    color: #FFFFFF;
+    height: 55px;
+    left: 0;
+    opacity: 0.8;
+    padding: 13px 20px;
+    width: 100%;
+    z-index: 8;
+  }
+  /* line 121, ../scss/style.scss */
+  .picNav a {
+    color: white;
+    opacity: 1;
+  }
+  /* line 124, ../scss/style.scss */
+  .picNav a:hover {
+    color: #be6506;
+  }
+  /* line 127, ../scss/style.scss */
+  .picNav a:focus {
+    color: #f89832;
+    outline: none;
+  }
+}

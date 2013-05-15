@@ -1,0 +1,1219 @@
+/**!
+ * This app.css is all yours, if you wish to have it ready with your application put it in here!
+ */
+ /* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Homepage
+:: Porfolio
+:: Page
+
+ */
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+/* line 21, ../scss/app.scss */
+body {
+  background: #555555;
+  font-family: "Arial",Gadget,sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1;
+  color: #eeeeee;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 26, ../scss/app.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #f89832;
+  font-weight: bold;
+  line-height: 1.25;
+}
+/* line 30, ../scss/app.scss */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit;
+}
+
+/* line 39, ../scss/app.scss */
+a {
+  color: #89c348;
+  -web-transition: color .75 ease;
+  -moz-transition: color .75 ease;
+  -o-transition: color .75 ease;
+  transition: color .75 ease;
+  text-decoration: none;
+  line-height: inherit;
+}
+/* line 47, ../scss/app.scss */
+a:hover {
+  color: #557c29;
+}
+/* line 50, ../scss/app.scss */
+a:focus {
+  color: #89c348;
+  outline: none;
+}
+
+/* line 57, ../scss/app.scss */
+p a, p a:visited {
+  line-height: inherit;
+}
+
+/* line 63, ../scss/app.scss */
+ul.inline-list-ctr, ul.link-list-ctr {
+  margin: 0 0 12px 12px;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+/* line 68, ../scss/app.scss */
+ul.inline-list-ctr > li, ul.link-list-ctr > li {
+  list-style: none;
+  float: left;
+  margin-left: 22px;
+  display: block;
+}
+/* line 73, ../scss/app.scss */
+ul.inline-list-ctr > li > *, ul.link-list-ctr > li > * {
+  display: block;
+  font-size: 15px;
+}
+
+/* line 76, ../scss/app.scss */
+ul.inline-list > li, ul.link-list > li {
+  display: block;
+  float: left;
+  list-style: none outside none;
+  margin-left: 22px;
+  text-align: center;
+}
+
+/* line 87, ../scss/app.scss */
+div.panel {
+  border: solid 1px #3b561c;
+  padding: 20px 20px 10px 20px;
+  background-color: #89c348;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #89c348), color-stop(100%, #6fa335));
+  background-image: -webkit-linear-gradient(#89c348 0%, #6fa335 100%);
+  background-image: -moz-linear-gradient(#89c348 0%, #6fa335 100%);
+  background-image: -o-linear-gradient(#89c348 0%, #6fa335 100%);
+  background-image: linear-gradient(#89c348 0%, #6fa335 100%);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  margin: 0 0 20px 0;
+}
+
+/* line 4, ../scss/zurb/_buttons.scss */
+.button {
+  background: #f89832;
+  display: inline-block;
+  text-align: center;
+  padding: 9px 34px 11px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 1;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin: 0;
+}
+
+/* line 23, ../scss/zurb/_buttons.scss */
+input[type=submit].button, button.button {
+  -webkit-appearance: none;
+}
+
+/* line 28, ../scss/zurb/_buttons.scss */
+button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: none;
+}
+
+/* line 34, ../scss/zurb/_buttons.scss */
+.button.nice {
+  background-color: #f89832;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(50%, rgba(255, 255, 255, 0.2)), color-stop(51%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 100%);
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 100%);
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 100%);
+  -webkit-box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 0;
+  -moz-box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 0;
+  box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, 0.28) 0 -1px 1px;
+  border: 1px solid #f7870f;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+/* line 44, ../scss/zurb/_buttons.scss */
+.button.radius {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 47, ../scss/zurb/_buttons.scss */
+.button.round {
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  -o-border-radius: 1000px;
+  border-radius: 1000px;
+}
+/* line 50, ../scss/zurb/_buttons.scss */
+.button.full-width {
+  width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: center;
+}
+/* line 56, ../scss/zurb/_buttons.scss */
+.button.left-align {
+  text-align: left;
+  text-indent: 12px;
+}
+/* line 61, ../scss/zurb/_buttons.scss */
+.button.tiny {
+  font-size: 10px;
+  font-size: 1rem;
+  padding: 6px 14px 8px;
+  width: auto;
+}
+/* line 66, ../scss/zurb/_buttons.scss */
+.button.small {
+  font-size: 11px;
+  font-size: 1.1rem;
+  padding: 8px 20px 10px;
+  width: auto;
+}
+/* line 71, ../scss/zurb/_buttons.scss */
+.button.medium {
+  font-size: 13px;
+  font-size: 1.3rem;
+  width: auto;
+}
+/* line 75, ../scss/zurb/_buttons.scss */
+.button.large {
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding: 11px 48px 13px;
+  width: auto;
+}
+/* line 81, ../scss/zurb/_buttons.scss */
+.button.blue {
+  background-color: #00a6fc;
+}
+/* line 84, ../scss/zurb/_buttons.scss */
+.button.red {
+  background-color: #e91c21;
+}
+/* line 87, ../scss/zurb/_buttons.scss */
+.button.white {
+  background-color: #f0f0f0;
+  color: #333333;
+}
+/* line 91, ../scss/zurb/_buttons.scss */
+.button.black {
+  background-color: #1a1a1a;
+}
+/* line 94, ../scss/zurb/_buttons.scss */
+.button.green {
+  background-color: #89c348;
+}
+/* line 99, ../scss/zurb/_buttons.scss */
+.button.nice.blue {
+  border: 1px solid #008ed8;
+}
+/* line 102, ../scss/zurb/_buttons.scss */
+.button.nice.red {
+  border: 1px solid #cd1418;
+}
+/* line 105, ../scss/zurb/_buttons.scss */
+.button.nice.white {
+  border: 1px solid #d4d4d4;
+  text-shadow: none !important;
+}
+/* line 109, ../scss/zurb/_buttons.scss */
+.button.nice.black {
+  border: 1px solid #1a1a1a;
+}
+/* line 112, ../scss/zurb/_buttons.scss */
+.button.nice.green {
+  border: 1px solid #77ae39;
+}
+/* line 117, ../scss/zurb/_buttons.scss */
+.button:hover, .button:focus {
+  background-color: #f78914;
+  color: white;
+}
+/* line 121, ../scss/zurb/_buttons.scss */
+.button.blue:hover, .button.blue:focus {
+  background-color: #0092dd;
+}
+/* line 124, ../scss/zurb/_buttons.scss */
+.button.red:hover, .button.red:focus {
+  background-color: #d21419;
+}
+/* line 127, ../scss/zurb/_buttons.scss */
+.button.white:hover, .button.white:focus {
+  background-color: #dedede;
+  color: #333333;
+}
+/* line 131, ../scss/zurb/_buttons.scss */
+.button.black:hover, .button.black:focus {
+  background-color: black;
+}
+/* line 134, ../scss/zurb/_buttons.scss */
+.button.green:hover, .button.green:focus {
+  background-color: #7ab23a;
+}
+/* line 138, ../scss/zurb/_buttons.scss */
+.button.nice:active {
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+/* line 142, ../scss/zurb/_buttons.scss */
+.button.disabled, .button[disabled] {
+  opacity: 0.6;
+  cursor: default;
+}
+
+@-moz-document url-prefix("http://") {
+  /* line 150, ../scss/zurb/_buttons.scss */
+  input[type=submit].button::-moz-focus-inner, button.button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  /* line 154, ../scss/zurb/_buttons.scss */
+  input[type=submit].tiny.button {
+    padding: 5px 14px 7px;
+  }
+
+  /* line 157, ../scss/zurb/_buttons.scss */
+  input[type=submit].small.button {
+    padding: 7px 20px 8px;
+  }
+
+  /* line 160, ../scss/zurb/_buttons.scss */
+  input[type=submit].medium.button {
+    padding: 8px 34px 9px;
+  }
+
+  /* line 163, ../scss/zurb/_buttons.scss */
+  input[type=submit].large.button {
+    padding: 9px 48px 10px;
+  }
+}
+
+/* line 103, ../scss/app.scss */
+footer {
+  background-color: #333333;
+  background-image: url("../images/welcome_panel.jpg");
+  margin-top: 25px;
+  border-top: 2px solid black;
+}
+
+/* line 110, ../scss/app.scss */
+.nav-bar {
+  height: 40px;
+  background: #555555;
+  border: 0px dashed white;
+  border-radius: 0px;
+  margin-left: 0;
+  margin-top: 35px;
+  padding: 0;
+  color: #89c348;
+}
+/* line 120, ../scss/app.scss */
+.nav-bar > li {
+  float: left;
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: 0px;
+  border-right: 0px solid #555555;
+  line-height: 38px;
+  -webkit-box-shadow: 0px 0 0 rgba(255, 255, 255, 0.2) inset;
+  -moz-box-shadow: 0px 0 0 rgba(255, 255, 255, 0.2) inset;
+  box-shadow: 0px 0 0 rgba(255, 255, 255, 0.2) inset;
+}
+/* line 132, ../scss/app.scss */
+.nav-bar > li:first-child {
+  border-radius: 00px;
+  border: 0px dashed #555555;
+  -webkit-box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+}
+/* line 138, ../scss/app.scss */
+.nav-bar > li:last-child {
+  border-right: 0px solid #555555;
+  -webkit-box-shadow: 0px 0 0 rgba(255, 255, 255, 0.2) inset, 0px 0 0 rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: 0px 0 0 rgba(255, 255, 255, 0.2) inset, 0px 0 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0 0 rgba(255, 255, 255, 0.2) inset, 0px 0 0 rgba(255, 255, 255, 0.2);
+}
+/* line 144, ../scss/app.scss */
+.nav-bar > li.active {
+  background: #555555;
+  color: #89c348;
+  border-color: #ccc;
+}
+/* line 148, ../scss/app.scss */
+.nav-bar > li.active a {
+  color: #89c348;
+  cursor: default;
+}
+/* line 151, ../scss/app.scss */
+.nav-bar > li.active:hover {
+  background: #555555;
+  color: #557c29;
+  cursor: default;
+  border-radius: 00px;
+}
+/* line 157, ../scss/app.scss */
+.nav-bar > li:hover {
+  background: #555555;
+  color: #557c29;
+}
+/* line 158, ../scss/app.scss */
+.nav-bar > li > a {
+  color: #89c348;
+}
+/* line 159, ../scss/app.scss */
+.nav-bar > li ul {
+  margin-bottom: 0;
+}
+/* line 160, ../scss/app.scss */
+.nav-bar > li.flyout {
+  display: none;
+}
+/* line 162, ../scss/app.scss */
+.nav-bar > li.has-flyout > a:first-child {
+  padding-right: 40px;
+  position: relative;
+}
+/* line 165, ../scss/app.scss */
+.nav-bar > li.has-flyout > a:first-child:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid 4px;
+  border-color: #e6e6e6 transparent transparent transparent;
+  position: absolute;
+  right: 20px;
+  top: 17px;
+}
+/* line 176, ../scss/app.scss */
+.nav-bar > li.has-flyout.a.flyout-toggle {
+  border-left: 0 !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  z-index: 2;
+  display: block;
+}
+/* line 185, ../scss/app.scss */
+.nav-bar > li.has-flyout.is-touch > a:first-child {
+  padding-right: 55px;
+}
+/* line 186, ../scss/app.scss */
+.nav-bar > li.has-flyout.is-touch > a.flyout-toggle {
+  border-left: 1px dashed #89c348;
+}
+/* line 189, ../scss/app.scss */
+.nav-bar > li > a:first-child {
+  position: relative;
+  padding: 0 10px;
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+}
+/* line 196, ../scss/app.scss */
+.nav-bar > li > input {
+  margin: 0 10px;
+}
+/* line 198, ../scss/app.scss */
+.nav-bar.vertical {
+  height: auto;
+  margin-top: 0;
+}
+/* line 199, ../scss/app.scss */
+.nav-bar.vertical > li {
+  float: none;
+  border-bottom: none;
+  border-right: solid 1px #333333;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 206, ../scss/app.scss */
+.nav-bar.vertical > li.has-flyout > a:first-child:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid 4px;
+  border-color: transparent transparent transparent #e6e6e6;
+}
+/* line 214, ../scss/app.scss */
+.nav-bar.vertical > li.flyout {
+  left: 100%;
+  top: -1px;
+}
+/* line 215, ../scss/app.scss */
+.nav-bar.vertical > li.flyout.right {
+  left: auto;
+  right: 100%;
+}
+/* line 217, ../scss/app.scss */
+.nav-bar.vertical > li.active {
+  border-right: solid 1px #2284a1;
+}
+/* line 218, ../scss/app.scss */
+.nav-bar.vertical > li:last-child {
+  border-bottom: solid 1px #333333;
+}
+
+/* line 223, ../scss/app.scss */
+.flyout {
+  background: #141414;
+  border-radius: 0px;
+  margin-top: -10px;
+  padding: 20px;
+  border: 0px dashed #89c348;
+  position: absolute;
+  top: 39px;
+  left: -1px;
+  width: 150px;
+  z-index: 40;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  /* remove margin on any first-child element */
+  /* remove margin on last element */
+}
+/* line 237, ../scss/app.scss */
+.flyout > li {
+  float: left;
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: 0px solid #333333;
+  border-right: none;
+  line-height: 38px;
+  -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+  -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+}
+/* line 249, ../scss/app.scss */
+.flyout > li p {
+  line-height: 1.2;
+  font-size: 13px;
+}
+/* line 250, ../scss/app.scss */
+.flyout > li*:first-child {
+  margin-top: 0;
+}
+/* line 251, ../scss/app.scss */
+.flyout > li*:last-child {
+  margin-bottom: 0;
+}
+/* line 252, ../scss/app.scss */
+.flyout > li.small {
+  width: 166.66667px;
+}
+/* line 253, ../scss/app.scss */
+.flyout > li.flyout.large {
+  width: 437.5px;
+}
+/* line 254, ../scss/app.scss */
+.flyout > li.up {
+  top: auto;
+  bottom: 39px;
+}
+
+/*
+ul.flyout, .nav-bar li ul { padding: 0; list-style: none; }
+ul.flyout li, .nav-bar li ul li { border-left: 0px solid #CCC; }
+ul.flyout li a, .nav-bar li ul li a { background: $light_grey;  color: $default-color; border-radius: 00px; border: 0px dashed $default-color; border-width: 0px; display: block; font-size: 14px; height: auto; line-height: 1; padding: 15px 20px; width:150px; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
+ul.flyout li a:hover, ul.flyout li a:focus, .nav-bar li ul li a:hover, .nav-bar li ul li a:focus { background: $dark_grey;  color: darken($default-color, 90%); width:150px;  }
+ul.flyout li.active, .nav-bar li ul li.active { margin-top: 0; border-top: 0px solid #4d4d4d; border-left: 0px solid #1a1a1a; width:150px; }
+ul.flyout li.active a, .nav-bar li ul li.active a { background: $five;  color: lighten($default-color, 40%); width:150px;  border: none; height: auto; margin: 0; position: static; top: 0; -webkit-box-shadow: 0 0 0; -moz-box-shadow: 0 0 0; box-shadow: 0 0 0; }
+*/
+/* line 265, ../scss/app.scss */
+ul.flyout, .nav-bar li ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* line 266, ../scss/app.scss */
+ul.flyout li, .nav-bar li ul li {
+  border-left: 0px solid #CCC;
+}
+
+/* line 267, ../scss/app.scss */
+ul.flyout li a, .nav-bar li ul li a {
+  background: #555555;
+  color: #89c348;
+  border-radius: 00px;
+  border: 0px dashed #89c348;
+  border-width: 0px;
+  display: block;
+  font-size: 14px;
+  height: auto;
+  line-height: 1;
+  padding: 15px 20px;
+  width: 150px;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+/* line 268, ../scss/app.scss */
+ul.flyout li a:hover, ul.flyout li a:focus, .nav-bar li ul li a:hover, .nav-bar li ul li a:focus {
+  background: #555555;
+  color: white;
+  width: 150px;
+}
+
+/* line 269, ../scss/app.scss */
+ul.flyout li.active, .nav-bar li ul li.active {
+  margin-top: 0;
+  border-top: 0px solid #4d4d4d;
+  border-left: 0px solid #1a1a1a;
+  width: 150px;
+}
+
+/* line 270, ../scss/app.scss */
+ul.flyout li.active a, .nav-bar li ul li.active a {
+  color: #ecf5e2;
+  width: 150px;
+  border: none;
+  height: auto;
+  margin: 0;
+  position: static;
+  top: 0;
+  -webkit-box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+}
+
+/* -----------------------------------------
+   HomePage
+----------------------------------------- */
+/* line 280, ../scss/app.scss */
+.welcome {
+  position: relative;
+  background: none repeat scroll 0 0 #444444;
+  background-image: url("../images/welcome_panel.jpg");
+  border-top: 1px solid #DEDEDE;
+  border-bottom: 1px solid #DEDEDE;
+  padding: 0px 0 0px;
+  text-align: left;
+}
+
+/* line 292, ../scss/app.scss */
+.home-slider {
+  padding: 0px 0 60px;
+  top: 50px;
+}
+
+/* line 300, ../scss/app.scss */
+.phone {
+  font-size: 18px;
+}
+
+/* line 301, ../scss/app.scss */
+.phone1 {
+  margin-top: 42px;
+  font-size: 18px;
+}
+
+/* -----------------------------------------
+   Misc.
+----------------------------------------- */
+/* How to use: <hr class="carved" /> */
+/* line 318, ../scss/app.scss */
+hr.carved {
+  clear: both;
+  float: none;
+  width: 100%;
+  height: 2px;
+  margin: 1.4em 0;
+  border: none;
+  background: #ddd;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, #dddddd), color-stop(0.5, white));
+  background-image: -moz-linear-gradient(center top, #dddddd 50%, white 50%);
+}
+
+/* -----------------------------------------
+   Porfolio
+----------------------------------------- */
+/* line 343, ../scss/app.scss */
+.view {
+  width: 280px;
+  height: 200px;
+  margin: 10px;
+  float: left;
+  border: 10px solid #6fa335;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  box-shadow: 1px 1px 2px #444444;
+  cursor: default;
+  background: white url(../images/bgimg.jpg) no-repeat center center;
+}
+
+/* line 356, ../scss/app.scss */
+.view .mask, .view .content {
+  width: 280px;
+  height: 185px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+/* line 364, ../scss/app.scss */
+.view img {
+  display: block;
+  position: relative;
+}
+
+/* line 368, ../scss/app.scss */
+.view h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 20px 0 0 0;
+  width: 280px;
+}
+
+/* line 379, ../scss/app.scss */
+.view p {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 12px;
+  position: relative;
+  color: #fff;
+  padding: 10px 20px 20px;
+  text-align: center;
+  margin-bottom: -5px;
+  width: 280px;
+}
+
+/* line 390, ../scss/app.scss */
+.view a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px black;
+}
+
+/* line 399, ../scss/app.scss */
+.view a.info:hover {
+  box-shadow: 0 0 5px black;
+}
+
+/* line 403, ../scss/app.scss */
+.view-first img {
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+/* line 410, ../scss/app.scss */
+.view-first .mask {
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background-color: rgba(140, 198, 63, 0.7);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+/* line 421, ../scss/app.scss */
+.view-first h2 {
+  -webkit-transform: translateY(-100px);
+  -moz-transform: translateY(-100px);
+  -o-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  transform: translateY(-100px);
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* line 436, ../scss/app.scss */
+.view-first p {
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -o-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  transform: translateY(100px);
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+/* line 451, ../scss/app.scss */
+.view-first:hover img {
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+/* line 458, ../scss/app.scss */
+.view-first a.info {
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* line 468, ../scss/app.scss */
+.view-first:hover .mask {
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+/* line 475, ../scss/app.scss */
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info {
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+/* line 485, ../scss/app.scss */
+.view-first:hover p {
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  -ms-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+/* line 492, ../scss/app.scss */
+.view-first:hover a.info {
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+/* -----------------------------------------
+   Page
+----------------------------------------- */
+/* line 503, ../scss/app.scss */
+.page-header {
+  background: none repeat scroll 0 0 #444444;
+  background-image: url("../images/welcome_panel.jpg");
+  border-top: 1px solid #DEDEDE;
+  border-bottom: 1px solid #DEDEDE;
+  padding: 20px 0 20px;
+  text-align: left;
+}
+/* line 510, ../scss/app.scss */
+.page-header h4 {
+  color: #89C348;
+  font-weight: bold;
+  line-height: 1.25;
+}
+/* line 517, ../scss/app.scss */
+.page-header h4 a {
+  font-weight: inherit;
+}
+
+/* line 523, ../scss/app.scss */
+.shadow {
+  -moz-box-shadow: 3px 3px 4px #f89832;
+  -webkit-box-shadow: 3px 3px 4px #f89832;
+  box-shadow: 3px 3px 4px #f89832;
+}
+
+/* -----------------------------------------
+   Landing Page
+----------------------------------------- */
+/* line 534, ../scss/app.scss */
+.LPcontainer {
+  margin: 75px auto;
+  background: white;
+  padding: 20px;
+  opacity: 0.90;
+  color: black;
+}
+
+/* line 542, ../scss/app.scss */
+.LPbody {
+  background: url("../images/LandingBG.png");
+}
+
+@media only screen and (max-width: 767px) {
+  /* -----------------------------------------
+     Shared Styles
+  ----------------------------------------- */
+  /* line 555, ../scss/app.scss */
+  .nav-bar {
+    height: 40px;
+    background: #141414;
+    margin-left: 0;
+    margin-top: 20px;
+    padding: 0;
+  }
+  /* line 561, ../scss/app.scss */
+  .nav-bar > li {
+    float: left;
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #333333;
+    border-right: none;
+    line-height: 38px;
+    -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+    -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+  }
+  /* line 573, ../scss/app.scss */
+  .nav-bar > li:first-child {
+    -webkit-box-shadow: 0 0 0;
+    -moz-box-shadow: 0 0 0;
+    box-shadow: 0 0 0;
+  }
+  /* line 577, ../scss/app.scss */
+  .nav-bar > li:last-child {
+    border-right: solid 1px #333333;
+    -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2);
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 1px 0 0 rgba(255, 255, 255, 0.2);
+  }
+  /* line 582, ../scss/app.scss */
+  .nav-bar > li.active {
+    background: #89c348;
+    border-color: #2284a1;
+  }
+  /* line 585, ../scss/app.scss */
+  .nav-bar > li.active a {
+    color: white;
+    cursor: default;
+  }
+  /* line 588, ../scss/app.scss */
+  .nav-bar > li.active:hover {
+    background: #89c348;
+    cursor: default;
+  }
+  /* line 592, ../scss/app.scss */
+  .nav-bar > li:hover {
+    background: #444444;
+  }
+  /* line 593, ../scss/app.scss */
+  .nav-bar > li > a {
+    color: white;
+  }
+  /* line 594, ../scss/app.scss */
+  .nav-bar > li ul {
+    margin-bottom: 0;
+  }
+  /* line 595, ../scss/app.scss */
+  .nav-bar > li.flyout {
+    display: none;
+  }
+  /* line 597, ../scss/app.scss */
+  .nav-bar > li.has-flyout > a:first-child {
+    padding-right: 40px;
+    position: relative;
+  }
+  /* line 600, ../scss/app.scss */
+  .nav-bar > li.has-flyout > a:first-child:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 4px;
+    border-color: #e6e6e6 transparent transparent transparent;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+  }
+  /* line 611, ../scss/app.scss */
+  .nav-bar > li.has-flyout.a.flyout-toggle {
+    border-left: 0 !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 20px;
+    z-index: 2;
+    display: block;
+  }
+  /* line 620, ../scss/app.scss */
+  .nav-bar > li.has-flyout.is-touch > a:first-child {
+    padding-right: 55px;
+  }
+  /* line 621, ../scss/app.scss */
+  .nav-bar > li.has-flyout.is-touch > a.flyout-toggle {
+    border-left: 1px dashed #666;
+  }
+  /* line 624, ../scss/app.scss */
+  .nav-bar > li > a:first-child {
+    position: relative;
+    padding: 0 20px;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  /* line 631, ../scss/app.scss */
+  .nav-bar > li > input {
+    margin: 0 10px;
+  }
+  /* line 633, ../scss/app.scss */
+  .nav-bar.vertical {
+    height: auto;
+    margin-top: 0;
+  }
+  /* line 634, ../scss/app.scss */
+  .nav-bar.vertical > li {
+    float: none;
+    border-bottom: none;
+    border-right: solid 1px #333333;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 641, ../scss/app.scss */
+  .nav-bar.vertical > li.has-flyout > a:first-child:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 4px;
+    border-color: transparent transparent transparent #e6e6e6;
+  }
+  /* line 649, ../scss/app.scss */
+  .nav-bar.vertical > li.flyout {
+    left: 100%;
+    top: -1px;
+  }
+  /* line 650, ../scss/app.scss */
+  .nav-bar.vertical > li.flyout.right {
+    left: auto;
+    right: 100%;
+  }
+  /* line 652, ../scss/app.scss */
+  .nav-bar.vertical > li.active {
+    border-right: solid 1px #2284a1;
+  }
+  /* line 653, ../scss/app.scss */
+  .nav-bar.vertical > li:last-child {
+    border-bottom: solid 1px #333333;
+  }
+
+  /* line 658, ../scss/app.scss */
+  .flyout {
+    background: #f2f2f2;
+    padding: 20px;
+    margin: 0;
+    border: 1px solid #d9d9d9;
+    position: absolute;
+    top: 39px;
+    left: -1px;
+    width: 150px;
+    z-index: 40;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    /* remove margin on any first-child element */
+    /* remove margin on last element */
+  }
+  /* line 671, ../scss/app.scss */
+  .flyout > li {
+    float: left;
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #333333;
+    border-right: none;
+    line-height: 38px;
+    -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+    -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+  }
+  /* line 683, ../scss/app.scss */
+  .flyout > li p {
+    line-height: 1.2;
+    font-size: 13px;
+  }
+  /* line 684, ../scss/app.scss */
+  .flyout > li*:first-child {
+    margin-top: 0;
+  }
+  /* line 685, ../scss/app.scss */
+  .flyout > li*:last-child {
+    margin-bottom: 0;
+  }
+  /* line 686, ../scss/app.scss */
+  .flyout > li.small {
+    width: 166.66667px;
+  }
+  /* line 687, ../scss/app.scss */
+  .flyout > li.flyout.large {
+    width: 437.5px;
+  }
+  /* line 688, ../scss/app.scss */
+  .flyout > li.up {
+    top: auto;
+    bottom: 39px;
+  }
+
+  /* line 692, ../scss/app.scss */
+  ul.flyout, .nav-bar li ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  /* line 693, ../scss/app.scss */
+  ul.flyout li, .nav-bar li ul li {
+    border-left: solid 3px #CCC;
+  }
+
+  /* line 694, ../scss/app.scss */
+  ul.flyout li a, .nav-bar li ul li a {
+    background: #f2f2f2;
+    border: 1px solid #e6e6e6;
+    border-width: 1px 1px 0 0;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: auto;
+    line-height: 1;
+    padding: 15px 20px;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  }
+
+  /* line 695, ../scss/app.scss */
+  ul.flyout li a:hover, ul.flyout li a:focus, .nav-bar li ul li a:hover, .nav-bar li ul li a:focus {
+    background: #ebebeb;
+    color: #333;
+  }
+
+  /* line 696, ../scss/app.scss */
+  ul.flyout li.active, .nav-bar li ul li.active {
+    margin-top: 0;
+    border-top: 1px solid #4d4d4d;
+    border-left: 4px solid #1a1a1a;
+  }
+
+  /* line 697, ../scss/app.scss */
+  ul.flyout li.active a, .nav-bar li ul li.active a {
+    background: #4d4d4d;
+    border: none;
+    color: #fff;
+    height: auto;
+    margin: 0;
+    position: static;
+    top: 0;
+    -webkit-box-shadow: 0 0 0;
+    -moz-box-shadow: 0 0 0;
+    box-shadow: 0 0 0;
+  }
+
+  /* -----------------------------------------
+   HomePage
+----------------------------------------- */
+  /* -----------------------------------------
+   Page
+----------------------------------------- */
+  /* line 712, ../scss/app.scss */
+  .page-header {
+    background: none repeat scroll 0 0 #444444;
+    background-image: url("../images/welcome_panel.jpg");
+    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 20px 0 20px;
+    text-align: left;
+  }
+  /* line 719, ../scss/app.scss */
+  .page-header h4 {
+    color: #89c348;
+    font-weight: bold;
+    line-height: 1.25;
+  }
+  /* line 723, ../scss/app.scss */
+  .page-header h4 a {
+    font-weight: inherit;
+  }
+
+  /* -----------------------------------------
+     Landing Page
+  ----------------------------------------- */
+  /* line 733, ../scss/app.scss */
+  .LPcontainer {
+    margin: 10px auto;
+    background: white;
+    padding: 10px;
+    opacity: 0.90;
+    color: black;
+  }
+}
