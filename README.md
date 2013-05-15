@@ -1,6 +1,3 @@
-required+ Starter
-=================
-
-required+ Starter is a sample child theme for the responsive WordPress parent theme [required+ Foundation](https://github.com/wearerequired/required-foundation) based on the Foundation framework by ZURB.
-
-Released under GPL. Foundation parts under MIT.
+<h1>Hype Advertising Theme</h1>
+<p>This theme is for the company's website. Hype is bases out of Greenville, SC</p>
+<p>Website: <a href="http://www.hypeadvertising.com">http://www.hypeadvertising.com</a></p>  
