@@ -16,49 +16,26 @@
 get_header(); ?>
 	<div class="welcome">
 		<div class="row">
-			<div class="hide-for-small twelve">
+			<div class=" twelve">
 				<?php
 		    /**
 		     * Use the shortcode to create the slider
 		     */
-		    echo do_shortcode("[nivoslider slug='homeslider']");
-		      // echo do_shortcode("[orbit id=28]");
-		      //do_shortcode("[orbit include='7,8,9']");
+		    echo do_shortcode("[nivoslider id='100']");
+		      
 				?> 
 			</div>
-			<div class="show-for-small twelve columns">
-				<?php
-		    /**
-		     * Use the shortcode to create the slider
-		     */
-		    echo do_shortcode("[nivoslider slug='homeslider']");
-		      // echo do_shortcode("[orbit id=28]");
-		      //do_shortcode("[orbit include='7,8,9']");
-				?> 
-			</div>
+
 			<div class="twelve columns">
 				<div class="picNav hide-for-small">
 					<div >
 						<ul class="inline-list right">
-						    <li><a href="#"><i class="icon-latptop icon-3x"></i><br/>Design</a></li>
-						    <li><a href="#"><i class="icon-latptop icon-3x"></i><br/>Web</a></li>
-						    <li><a href="#"><i class="icon-search icon-3x"></i><br/>SEO</a></li>
-						    <li><a href="#"><i class="icon-money icon-3x"></i><br/>PPC</a></li>
-						    <li><a href="#"><i class="icon-globe icon-3x"></i><br/>Social Media</a></li>
-						    <li><a href="#"><i class="icon-print icon-3x"></i><br/>PPC</a></li>
-					    </ul>
-					</div>
-				</div> 
-
-				<div class="picNav show-for-small">
-					<div >
-						<ul class="inline-list right">
-						    <li><a href="#"><i class="icon-latptop icon-2x"></i><br/></a></li>
-						    <li><a href="#"><i class="icon-latptop icon-2x"></i><br/></a></li>
-						    <li><a href="#"><i class="icon-search icon-2x"></i><br/></a></li>
-						    <li><a href="#"><i class="icon-money icon-2x"></i><br/></a></li>
-						    <li><a href="#"><i class="icon-globe icon-2x"></i><br/></a></li>
-						    <li><a href="#"><i class="icon-print icon-2x"></i><br/></a></li>
+						    <li><a href="#"><img src="../comdevhypeadvertising/wp-content/uploads/2013/05/design.png" alt="" width="30" height="30"><br/>Design</a></li>
+						    <li><a href="#"><img src="../comdevhypeadvertising/wp-content/uploads/2013/05/World-01.png" alt="" width="30" height="30"><br/>Web</a></li>
+						    <li><a href="#"><img src="../comdevhypeadvertising/wp-content/uploads/2013/05/seo.png" alt="" width="30" height="30"><br/>SEO</a></li>
+						    <li><a href="#"><img src="../comdevhypeadvertising/wp-content/uploads/2013/05/ppc.png" alt="" width="30" height="30"><br/>PPC</a></li>
+						    <li><a href="#"><img src="../comdevhypeadvertising/wp-content/uploads/2013/05/social-media.png" alt="" width="30" height="30"><br/>Social Media</a></li>
+						    <li><a href="#"><img src="../comdevhypeadvertising/wp-content/uploads/2013/05/print.png" alt="" width="30" height="30"><br/>Print</a></li>
 					    </ul>
 					</div>
 				</div> 

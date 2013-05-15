@@ -1,6 +1,8 @@
-<?php
+
+
+ <?php
 /**
- * Template Name: HomePage 4 
+ * Template Name: HomePage 4 - Local Machine
  * Description: This is a homepage that has has a slider, four widget area, and 
  * 				three widget areas in the footer
  */
@@ -14,26 +16,16 @@
 get_header(); ?>
 	<div class="welcome">
 		<div class="row">
-			<div class="hide-for-small twelve">
+			<div class=" twelve">
 				<?php
 		    /**
 		     * Use the shortcode to create the slider
 		     */
-		    echo do_shortcode("[nivoslider slug='60']");
-		      // echo do_shortcode("[orbit id=28]");
-		      //do_shortcode("[orbit include='7,8,9']");
+		    echo do_shortcode("[nivoslider id='60']");
+		      
 				?> 
 			</div>
-			<div class="show-for-small twelve columns">
-				<?php
-		    /**
-		     * Use the shortcode to create the slider
-		     */
-		    echo do_shortcode("[nivoslider slug='60']");
-		      // echo do_shortcode("[orbit id=28]");
-		      //do_shortcode("[orbit include='7,8,9']");
-				?> 
-			</div>
+
 			<div class="twelve columns">
 				<div class="picNav hide-for-small">
 					<div >
@@ -47,10 +39,9 @@ get_header(); ?>
 					    </ul>
 					</div>
 				</div> 
-			</div> 
+			</div>
 		</div>
 	</div>
-</div>
 
 	<div class="hide welcome">
 		<div class="row">
